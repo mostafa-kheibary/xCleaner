@@ -7,9 +7,10 @@ xCleaner is a Chrome extension that allows you to filter users on your Twitter t
 
 ## Installation
 
-1. **Download the Extension**: Clone or download the project files from the repository.
-2. **Open Chrome Extensions Page**: Go to `chrome://extensions/` in your Chrome browser.
-3. **Enable Developer Mode**: Toggle the Developer mode switch on the top right.
-4. **Load Unpacked**: Click on the "Load unpacked" button and select the directory where you downloaded the xCleaner files.
+There are 2 way to install xCleaner:
 
-Now xCleaner is ready to use!
+- install from chrome store
+
+<a href="https://chromewebstore.google.com/detail/chatguard-beta/fokigjblcpglhdmjimcpmjikdfmchccg"><img align=top src="./assets/images/chromeStore.svg"/></a>
+
+- or download from [release](https://github.com/mostafa-kheibary/xCleaner/releases/tag/v0.1.0) section and load unpacked
