@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "xCleaner",
   "description": "Clean your twitter(x) timeline based on users name",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "https://github.com/mostafa-kheibary",
   "icons": {
     "16": "assets/icons/icon16.png",
