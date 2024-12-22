@@ -1,7 +1,7 @@
-import useObserver from "src/hooks/useObserver";
-import BrowserStorage from "src/utils/BrowserStorage";
-import type { IStorage } from "src/utils/BrowserStorage";
-import { addTabListener } from "src/utils/tabListener";
+import useObserver from "../hooks/useObserver";
+import BrowserStorage from "../utils/BrowserStorage";
+import type { IStorage } from "../utils/BrowserStorage";
+import { addTabListener } from "../utils/tabListener";
 
 const main = async () => {
   const { onObserve } = useObserver();

@@ -5,20 +5,20 @@
   "version": "0.0.1",
   "author": "https://github.com/mostafa-kheibary",
   "icons": {
-    "16": "src/assets/icons/icon16.png",
-    "32": "src/assets/icons/icon32.png",
-    "48": "src/assets/icons/icon48.png",
-    "128": "src/assets/icons/icon128.png"
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
   },
   "content_scripts": [
     {
       "matches": ["https://x.com/*"],
-      "js": ["src/content/index.ts"]
+      "js": ["content.js"]
     }
   ],
   "action": {
     "default_title": "timeline cleaner",
-    "default_popup": "src/view/popup/index.html"
+    "default_popup": "popup.html"
   },
   "permissions": ["storage"]
 }

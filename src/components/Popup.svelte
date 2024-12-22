@@ -1,25 +1,28 @@
 <script lang="ts">
-  import xLogo from "../../../assets/icons/x.svg";
   import { onMount } from "svelte";
-  import BrowserStorage from "../../../utils/BrowserStorage";
-  import { sendMessage } from "src/utils/tabListener";
+  import BrowserStorage from "../utils/BrowserStorage";
+  import { sendMessage } from "../utils/tabListener";
 
-  let blackList = "";
+  let blackList = $state("");
+
   onMount(async () => {
     const store = await BrowserStorage.get();
+    console.log("wow", store);
     blackList = store.blackList;
   });
-  const handleApply = () => {
+  const handleApply = (e: Event) => {
+    e.preventDefault();
+    console.log("set");
     BrowserStorage.set({ blackList });
     sendMessage("addBlackList", true);
   };
 </script>
 
 <div class="container">
-  <img width="50px" src={xLogo} alt="" />
+  <img width="50px" src="../assets/icons/x.svg" alt="" />
   <h2 class="title">xCleaner</h2>
   <div class="content">
-    <form on:submit|preventDefault={handleApply} class="input-wrapper">
+    <form onsubmit={handleApply} class="input-wrapper">
       <input
         class="input"
         placeholder="black list character or emoji"
@@ -56,12 +59,6 @@
     height: 19rem;
     .title {
       font-weight: 500;
-    }
-    .description {
-      margin-top: -1rem;
-      font-size: 0.9rem;
-      color: #ffffff89;
-      font-weight: 300;
     }
     .content {
       width: 100%;
