@@ -13,9 +13,7 @@ module.exports = [
       file: "dist/popup.js",
     },
     plugins: [
-      svelte({
-        dev: false,
-      }),
+      svelte(),
       postcss({
         inject: true,
       }),
